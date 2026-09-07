@@ -17,7 +17,7 @@ const GlobalStyles = () => (
       * { -ms-overflow-style: none; scrollbar-width: none; }
 
       :root {
-        --dark-red: #84181a;
+        --dark-red: #000000;
         --cream: #f4ebd8;
       }
 
@@ -48,11 +48,11 @@ const GlobalStyles = () => (
         background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
       }
       .bg-noise-red {
-        background-color: var(--dark-red);
+        background-color: #000000;
         background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.08'/%3E%3C/svg%3E");
       }
       .bg-leather {
-        background-color: var(--dark-red);
+        background-color: #000000;
         background-image: url("https://www.transparenttextures.com/patterns/leather.png");
         background-blend-mode: multiply;
       }
@@ -146,7 +146,7 @@ export default function App() {
         onClick={() => setIsOpen(true)}
       >
         <GlobalStyles />
-        <div className="absolute top-0 bottom-0 left-0 w-12 md:w-16 bg-black/40 shadow-[10px_0_20px_rgba(0,0,0,0.6)] border-r border-[#3a0506]"></div>
+        <div className="absolute top-0 bottom-0 left-0 w-12 md:w-16 bg-black/40 shadow-[10px_0_20px_rgba(0,0,0,0.6)] border-r border-black"></div>
         <div className="z-10 flex flex-col items-center transform transition-transform duration-700 group-hover:scale-105 px-6 text-center">
           <p className="font-script text-[#ebd5a3] text-4xl mb-4 transform -rotate-3 opacity-90">Marina´s
           </p>
@@ -175,7 +175,7 @@ export default function App() {
       <GlobalStyles />
 
       <Page bgClass="bg-noise-cream">
-        <div className="h-[45%] w-full bg-noise-red relative border-b border-[#3a0506]/20 shadow-md">
+        <div className="h-[45%] w-full bg-noise-red relative border-b border-black/20 shadow-md">
           <span className="absolute top-8 left-6 text-white/50 font-hand text-3xl rotate-[-20deg]">
             ♡
           </span>
@@ -191,10 +191,10 @@ export default function App() {
           </div>
         </div>
         <div className="h-[55%] w-full flex flex-col items-center justify-end pb-20 relative">
-          <span className="absolute bottom-16 right-12 text-[var(--dark-red)] font-hand text-2xl rotate-[15deg] opacity-70">
+          <span className="absolute bottom-16 right-12 text-black font-hand text-2xl rotate-[15deg] opacity-70">
             ☆
           </span>
-          <span className="absolute top-20 left-10 text-[var(--dark-red)] font-hand text-2xl opacity-70">
+          <span className="absolute top-20 left-10 text-black font-hand text-2xl opacity-70">
             x
           </span>
         </div>
@@ -235,7 +235,7 @@ export default function App() {
             />
           </div>
              <div className="bg-white border border-gray-200 w-full p-4 shadow-sm text-xs font-sans text-gray-700">
-              <h3 className="text-center font-bold text-[var(--dark-red)] uppercase mb-3 text-sm">September</h3>
+              <h3 className="text-center font-bold text-black uppercase mb-3 text-sm">September</h3>
               <div className="grid grid-cols-7 gap-1 text-center font-bold border-b border-gray-200 pb-2 mb-2 uppercase text-[9px]">
                 <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
               </div>
@@ -243,10 +243,10 @@ export default function App() {
                 <div className="text-gray-300">29</div><div className="text-gray-300">30</div><div className="text-gray-300">31</div>
                 <div>1</div><div>2</div><div>3</div><div>4</div>
                 <div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div>
-                <div className="relative flex items-center justify-center text-[var(--dark-red)] font-bold text-sm">
+                <div className="relative flex items-center justify-center text-black font-bold text-sm">
                    11
                    <svg className="absolute w-10 h-10 -ml-0.5 pointer-events-none" viewBox="0 0 40 40">
-                     <path d="M 20 10 C 20 10 15 5 10 10 C 5 15 10 25 20 30 C 30 25 35 15 30 10 C 25 5 20 10 20 10 Z" fill="none" stroke="#84181a" strokeWidth="2" className="draw-circle-anim" />
+                     <path d="M 20 10 C 20 10 15 5 10 10 C 5 15 10 25 20 30 C 30 25 35 15 30 10 C 25 5 20 10 20 10 Z" fill="none" stroke="#000000" strokeWidth="2" className="draw-circle-anim" />
                    </svg>
                 </div>
                 <div>12</div><div>13</div><div>14</div><div>15</div><div>16</div><div>17</div><div>18</div>
@@ -285,10 +285,10 @@ export default function App() {
       </Page>
 
       <Page bgClass="bg-white" className="p-8 flex flex-col relative">
-        <h2 className="font-script text-[3.5rem] leading-none text-center text-gray-800 mt-12 mb-10">
+        <h2 className="font-script text-[3.8rem] leading-none text-center text-gray-800 mt-12 mb-10">
           Feliz Aniversário!
         </h2>
-        <div className="font-typewriter text-[9px] text-gray-500 space-y-4 text-justify leading-relaxed w-[80%]">
+        <div className="font-typewriter text-[12px] text-gray-500 space-y-4 text-justify leading-relaxed w-[86%]">
           <p>
             você é uma das melhores pessoas que eu já conheci e se tornou uma
             das pessoas mais importantes da minha vida.
@@ -305,7 +305,7 @@ export default function App() {
             uma relação de lealdade e respeito, sempre recíproca.
           </p>
         </div>
-        <div className="mt-12 font-script text-[2.5rem] text-gray-800 ml-4">
+        <div className="mt-12 font-script text-[2.8rem] text-gray-800 ml-4">
           eu amo você!
         </div>
         <div className="absolute bottom-10 right-6 flex">
@@ -336,7 +336,7 @@ export default function App() {
           </span>
           <div className="flex flex-col pb-4">
             <span className="font-sans text-3xl font-bold mb-2">th</span>
-            <p className="font-sans text-[9px] w-36 text-justify leading-tight opacity-90">
+            <p className="font-sans text-[13px] w-36 text-justify leading-tight opacity-90">
               Obrigado por ser meu lugar feliz e por fazer cada dia parecer tão
               especial. Tenho muita sorte de ter você ao meu lado.
             </p>
@@ -348,14 +348,14 @@ export default function App() {
         bgClass="bg-noise-cream"
         className="p-8 flex flex-col items-center relative"
       >
-        <h2 className="font-sans font-bold text-[var(--dark-red)] text-xs tracking-widest text-center mt-8 w-full leading-relaxed">
+        <h2 className="font-sans font-bold text-black text-xs tracking-widest text-center mt-8 w-full leading-relaxed">
           EU DESEJO AS MELHORES COISAS
           <br />
           <span className="text-xl tracking-[0.2em] mt-1 block">
             PRA VOCÊ, MUNDO
           </span>
         </h2>
-        <div className="w-48 h-[60%] bg-[var(--dark-red)] mt-12 relative flex flex-col items-center justify-center shadow-inner">
+        <div className="w-48 h-[60%] bg-black mt-12 relative flex flex-col items-center justify-center shadow-inner">
           <img
             src="src/img/WhatsApp Image 2026-09-07 at 18.22.39.jpeg"
             className="w-36 h-36 object-cover border-[4px] border-white absolute -top-8 -left-4 shadow-xl transform rotate-[-4deg]"
@@ -371,7 +371,7 @@ export default function App() {
         </div>
         <div className="absolute bottom-10 right-8 flex flex-col items-center">
           <div className="text-4xl drop-shadow-sm">🖤</div>
-          <p className="font-sans font-extrabold text-[var(--dark-red)] text-[10px] tracking-widest mt-1">
+          <p className="font-sans font-extrabold text-black text-[10px] tracking-widest mt-1">
             NÓS PRA SEMPRE
           </p>
         </div>
@@ -383,10 +383,10 @@ export default function App() {
       >
         <div className="stamp-edge w-full h-[80%] absolute inset-y-10 inset-x-4"></div>
         <div className="z-10 w-full h-full relative flex flex-col items-center justify-center">
-          <div className="absolute top-16 left-6 bg-white/90 backdrop-blur-sm px-4 py-1 font-script text-[2.5rem] text-[var(--dark-red)] transform -rotate-6 shadow-sm border border-gray-100">
+          <div className="absolute top-16 left-6 bg-white/90 backdrop-blur-sm px-4 py-1 font-script text-[2.5rem] text-black transform -rotate-6 shadow-sm border border-gray-100">
             Eu
           </div>
-          <div className="absolute top-28 right-6 bg-white/90 backdrop-blur-sm px-4 py-1 font-script text-[2.5rem] text-[var(--dark-red)] transform rotate-6 shadow-sm border border-gray-100">
+          <div className="absolute top-28 right-6 bg-white/90 backdrop-blur-sm px-4 py-1 font-script text-[2.5rem] text-black transform rotate-6 shadow-sm border border-gray-100">
             Vou
           </div>
           <div className="relative mt-8">
@@ -403,13 +403,13 @@ export default function App() {
               />
             </div>
           </div>
-          <div className="absolute bottom-40 left-6 bg-white/90 backdrop-blur-sm px-4 py-1 font-script text-[2.5rem] text-[var(--dark-red)] transform -rotate-3 shadow-sm border border-gray-100">
+          <div className="absolute bottom-40 left-6 bg-white/90 backdrop-blur-sm px-4 py-1 font-script text-[2.5rem] text-black transform -rotate-3 shadow-sm border border-gray-100">
             Amar
           </div>
-          <div className="absolute bottom-28 right-6 bg-white/90 backdrop-blur-sm px-4 py-1 font-script text-[2.5rem] text-[var(--dark-red)] transform rotate-3 shadow-sm border border-gray-100">
+          <div className="absolute bottom-28 right-6 bg-white/90 backdrop-blur-sm px-4 py-1 font-script text-[2.5rem] text-black transform rotate-3 shadow-sm border border-gray-100">
             Você
           </div>
-          <div className="absolute bottom-10 left-1/2 -translate-x-1/2 bg-white/90 backdrop-blur-sm px-6 py-2 font-script text-[3rem] text-[var(--dark-red)] transform -rotate-2 shadow-md border border-gray-100">
+          <div className="absolute bottom-10 left-1/2 -translate-x-1/2 bg-white/90 backdrop-blur-sm px-6 py-2 font-script text-[3rem] text-black transform -rotate-2 shadow-md border border-gray-100">
             Infinitamente
           </div>
         </div>
@@ -464,12 +464,12 @@ export default function App() {
           onMouseMove={handleMouseMoveClock}
           onTouchMove={handleMouseMoveClock}
         >
-          <div className="absolute w-1 h-14 bg-[var(--dark-red)] origin-bottom top-[50%] left-[50%] -ml-[2px] -mt-14 rotate-[150deg] rounded z-10 opacity-80"></div>
+          <div className="absolute w-1 h-14 bg-black origin-bottom top-[50%] left-[50%] -ml-[2px] -mt-14 rotate-[150deg] rounded z-10 opacity-80"></div>
           <div
-            className="absolute w-1.5 h-20 bg-[var(--dark-red)] origin-bottom top-[50%] left-[50%] -ml-[3px] -mt-20 rounded z-10 transition-transform duration-75"
+            className="absolute w-1.5 h-20 bg-black origin-bottom top-[50%] left-[50%] -ml-[3px] -mt-20 rounded z-10 transition-transform duration-75"
             style={{ transform: `rotate(${clockAngle}deg)` }}
           ></div>
-          <div className="absolute w-4 h-4 bg-[var(--dark-red)] rounded-full z-20 border-2 border-white shadow-sm"></div>
+          <div className="absolute w-4 h-4 bg-black rounded-full z-20 border-2 border-white shadow-sm"></div>
           <span className="absolute top-2 left-1/2 -translate-x-1/2">
             Twelve
           </span>
