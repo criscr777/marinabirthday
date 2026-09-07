@@ -375,7 +375,7 @@ export default function App() {
       </Page>
 
       <Page
-        bgClass="bg-noise-red"
+        bgClass="bg-black"
         className="p-6 flex flex-col items-center justify-center relative"
       >
         <div className="stamp-edge w-full h-[80%] absolute inset-y-10 inset-x-4"></div>
