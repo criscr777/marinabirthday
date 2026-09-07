@@ -285,9 +285,6 @@ export default function App() {
       </Page>
 
       <Page bgClass="bg-white" className="p-8 flex flex-col relative">
-        <h2 className="font-script text-[3.8rem] leading-none text-center text-gray-800 mt-12 mb-10">
-          Feliz Aniversário!
-        </h2>
         <div className="font-typewriter text-[12px] text-gray-500 space-y-4 text-justify leading-relaxed w-[86%]">
           <p>
             você é uma das melhores pessoas que eu já conheci e se tornou uma
