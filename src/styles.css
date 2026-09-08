@@ -22,3 +22,49 @@ img {
   display: block;
   max-width: 100%;
 }
+
+/* Fotos maiores nas páginas 2, 4 e na última página, mantendo o layout original. */
+img[src*="05.25"] {
+  width: 4.5rem !important;
+  height: 4.5rem !important;
+}
+
+img[src*="05.26.jpeg"] {
+  width: 5rem !important;
+  height: 5rem !important;
+}
+
+img[src*="05.26 (1).jpeg"] {
+  width: 4rem !important;
+  height: 4rem !important;
+}
+
+img[src*="08.47"] {
+  width: 10rem !important;
+  height: 6.25rem !important;
+}
+
+img[src*="19.50 (1)"] {
+  width: 7.5rem !important;
+  height: 10rem !important;
+}
+
+img[src*="19.50 (2)"] {
+  width: 8.75rem !important;
+  height: 6.25rem !important;
+}
+
+img[src*="32.44"] {
+  width: 12rem !important;
+  height: 7rem !important;
+}
+
+img[src*="32.45"] {
+  width: 12rem !important;
+  height: 7rem !important;
+}
+
+img[src*="34.28"] {
+  width: 12rem !important;
+  height: 7rem !important;
+}
