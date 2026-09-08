@@ -23,48 +23,31 @@ img {
   max-width: 100%;
 }
 
-/* Fotos maiores nas páginas 2, 4 e na última página, mantendo o layout original. */
-img[src*="05.25"] {
-  width: 4.5rem !important;
-  height: 4.5rem !important;
+/* Pagina 2 */
+img[src*="05.25"] { width: 4.5rem !important; height: 4.5rem !important; }
+img[src*="05.26.jpeg"] { width: 5rem !important; height: 5rem !important; }
+img[src*="05.26 (1).jpeg"] { width: 4rem !important; height: 4rem !important; }
+img[src*="08.47"] { width: 10rem !important; height: 6.25rem !important; }
+
+/* Pagina 4: maiores, mais acima e mais centralizadas */
+img[src*="19.50 (1)"] { width: 9rem !important; height: 12rem !important; }
+img[src*="19.50 (2)"] { width: 10.5rem !important; height: 7.5rem !important; }
+div:has(> img[src*="19.50 (1)"]) {
+  bottom: 6rem !important;
+  left: 50% !important;
+  right: auto !important;
+  transform: translateX(-50%) !important;
 }
 
-img[src*="05.26.jpeg"] {
-  width: 5rem !important;
-  height: 5rem !important;
-}
+/* Ultima pagina */
+img[src*="32.44"] { width: 15rem !important; height: 8.75rem !important; }
+img[src*="32.45"] { width: 15rem !important; height: 8.75rem !important; }
+img[src*="34.28"] { width: 15rem !important; height: 8.75rem !important; }
 
-img[src*="05.26 (1).jpeg"] {
-  width: 4rem !important;
-  height: 4rem !important;
-}
+/* Pagina 7: fotos bem maiores */
+img[src*="24.45.jpeg"] { width: 10rem !important; height: 13rem !important; }
+img[src*="24.45 (1).jpeg"] { width: 10rem !important; height: 13rem !important; }
 
-img[src*="08.47"] {
-  width: 10rem !important;
-  height: 6.25rem !important;
-}
-
-img[src*="19.50 (1)"] {
-  width: 7.5rem !important;
-  height: 10rem !important;
-}
-
-img[src*="19.50 (2)"] {
-  width: 8.75rem !important;
-  height: 6.25rem !important;
-}
-
-img[src*="32.44"] {
-  width: 12rem !important;
-  height: 7rem !important;
-}
-
-img[src*="32.45"] {
-  width: 12rem !important;
-  height: 7rem !important;
-}
-
-img[src*="34.28"] {
-  width: 12rem !important;
-  height: 7rem !important;
-}
+/* Mais espaco entre Voce e Infinitamente */
+div[class*="bottom-28"][class*="right-6"] { bottom: 12rem !important; }
+div[class*="bottom-10"][class*="left-1/2"] { bottom: 2rem !important; }
