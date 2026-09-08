@@ -48,6 +48,11 @@ img[src*="34.28"] { width: 15rem !important; height: 8.75rem !important; }
 img[src*="24.45.jpeg"] { width: 10rem !important; height: 13rem !important; }
 img[src*="24.45 (1).jpeg"] { width: 10rem !important; height: 13rem !important; }
 
+/* Pagina 6: aumentar um pouco mais as tres fotos */
+img[src*="22.39.jpeg"] { width: 9rem !important; height: 9rem !important; }
+img[src*="22.39 (1).jpeg"] { width: 9rem !important; height: 9rem !important; }
+img[src*="22.39 (2).jpeg"] { width: 9rem !important; height: 9rem !important; }
+
 /* Mais espaco entre Voce e Infinitamente */
 div[class*="bottom-28"][class*="right-6"] { bottom: 12rem !important; }
 div[class*="bottom-10"][class*="left-1/2"] { bottom: 2rem !important; }
