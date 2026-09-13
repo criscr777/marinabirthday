@@ -1,4 +1,25 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
+import coverPhoto from "./src/img/IMG_7776.JPG.jpeg";
+import friendPhotoOne from "./src/img/WhatsApp Image 2026-09-07 at 18.05.25.jpeg";
+import friendPhotoTwo from "./src/img/WhatsApp Image 2026-09-07 at 18.05.26.jpeg";
+import friendPhotoThree from "./src/img/WhatsApp Image 2026-09-07 at 18.05.26 (1).jpeg";
+import calendarPhoto from "./src/img/WhatsApp Image 2026-09-07 at 18.08.47.jpeg";
+import galleryPhotoOne from "./src/img/WhatsApp Image 2026-09-07 at 18.12.48.jpeg";
+import galleryPhotoTwo from "./src/img/WhatsApp Image 2026-09-07 at 18.12.19.jpeg";
+import galleryPhotoThree from "./src/img/WhatsApp Image 2026-09-07 at 18.17.31.jpeg";
+import galleryPhotoFour from "./src/img/WhatsApp Image 2026-09-07 at 18.10.50 (2).jpeg";
+import galleryPhotoFive from "./src/img/WhatsApp Image 2026-09-07 at 18.10.50 (3).jpeg";
+import letterPhotoOne from "./src/img/WhatsApp Image 2026-09-07 at 18.19.50 (1).jpeg";
+import letterPhotoTwo from "./src/img/WhatsApp Image 2026-09-07 at 18.19.50 (2).jpeg";
+import wishPhotoOne from "./src/img/WhatsApp Image 2026-09-07 at 18.22.39.jpeg";
+import wishPhotoTwo from "./src/img/WhatsApp Image 2026-09-07 at 18.22.39 (1).jpeg";
+import wishPhotoThree from "./src/img/WhatsApp Image 2026-09-07 at 18.22.39 (2).jpeg";
+import promisePhotoOne from "./src/img/WhatsApp Image 2026-09-07 at 18.24.45.jpeg";
+import promisePhotoTwo from "./src/img/WhatsApp Image 2026-09-07 at 18.24.45 (1).jpeg";
+import homePhoto from "./src/img/WhatsApp Image 2026-09-07 at 18.30.39.jpeg";
+import finalPhotoOne from "./src/img/WhatsApp Image 2026-09-07 at 18.32.44.jpeg";
+import finalPhotoTwo from "./src/img/WhatsApp Image 2026-09-07 at 18.32.45.jpeg";
+import finalPhotoThree from "./src/img/WhatsApp Image 2026-09-07 at 18.34.28.jpeg";
 
 // Estilos globais e injeção de fontes
 const GlobalStyles = () => (
@@ -99,11 +120,6 @@ export default function App() {
   const [isOpen, setIsOpen] = useState(false);
   const [clockAngle, setClockAngle] = useState(135);
 
-  const stripRef = useRef<HTMLDivElement | null>(null);
-  const [stripPos, setStripPos] = useState({ x: 0, y: 0 });
-  const [isDragging, setIsDragging] = useState(false);
-  const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
-
   const handleMouseMoveClock = (
     e: React.MouseEvent<HTMLDivElement> | React.TouchEvent<HTMLDivElement>,
   ) => {
@@ -121,24 +137,6 @@ export default function App() {
     }
   };
 
-  const handleDragStart = (
-    e: React.MouseEvent<HTMLDivElement> | React.TouchEvent<HTMLDivElement>,
-  ) => {
-    setIsDragging(true);
-    const clientX = "touches" in e ? e.touches[0].clientX : e.clientX;
-    const clientY = "touches" in e ? e.touches[0].clientY : e.clientY;
-    setDragStart({ x: clientX - stripPos.x, y: clientY - stripPos.y });
-  };
-  const handleDragMove = (
-    e: React.MouseEvent<HTMLDivElement> | React.TouchEvent<HTMLDivElement>,
-  ) => {
-    if (!isDragging) return;
-    const clientX = "touches" in e ? e.touches[0].clientX : e.clientX;
-    const clientY = "touches" in e ? e.touches[0].clientY : e.clientY;
-    setStripPos({ x: clientX - dragStart.x, y: clientY - dragStart.y });
-  };
-  const handleDragEnd = () => setIsDragging(false);
-
   if (!isOpen) {
     return (
       <div
@@ -148,13 +146,15 @@ export default function App() {
         <GlobalStyles />
         <div className="absolute top-0 bottom-0 left-0 w-12 md:w-16 bg-black/40 shadow-[10px_0_20px_rgba(0,0,0,0.6)] border-r border-black"></div>
         <div className="z-10 flex flex-col items-center transform transition-transform duration-700 group-hover:scale-105 px-6 text-center">
-          <p className="font-script text-[#ebd5a3] text-4xl mb-4 transform -rotate-3 opacity-90">Marina´s
+          <p className="font-script text-[#ebd5a3] text-4xl mb-4 transform -rotate-3 opacity-90">
+            Marina´s
           </p>
           <h1
             className="text-white text-5xl font-sans font-bold mb-16 uppercase tracking-tighter leading-none"
             style={{ textShadow: "0 5px 15px rgba(0,0,0,0.5)" }}
           >
-          Birthday</h1>
+            Birthday
+          </h1>
           <div className="w-28 h-28 rounded-full border-2 border-[#ebd5a3]/60 flex items-center justify-center animate-[pulseGlow_2s_infinite]">
             <span className="text-[#ebd5a3] font-sans text-sm uppercase tracking-widest font-bold">
               Abrir
@@ -166,12 +166,7 @@ export default function App() {
   }
 
   return (
-    <div
-      className="w-full h-[100dvh] bg-[#111] transition-opacity duration-1000 overflow-y-scroll snap-y snap-mandatory flex flex-col items-center"
-      onMouseUp={handleDragEnd}
-      onTouchEnd={handleDragEnd}
-      onMouseLeave={handleDragEnd}
-    >
+    <div className="w-full h-[100dvh] bg-[#111] transition-opacity duration-1000 overflow-y-scroll snap-y snap-mandatory flex flex-col items-center">
       <GlobalStyles />
 
       <Page bgClass="bg-noise-cream">
@@ -185,9 +180,7 @@ export default function App() {
           style={{ ["--rot" as any]: "-3deg" }}
         >
           <div className="polaroid w-56 h-64 transform rotate-[-3deg]">
-            <img
-              src="src/img/IMG_7776.JPG.jpeg"
-            />
+            <img src={coverPhoto} />
           </div>
         </div>
         <div className="h-[55%] w-full flex flex-col items-center justify-end pb-20 relative">
@@ -208,15 +201,15 @@ export default function App() {
             best friend, best friend, best friend...
           </div>
           <img
-            src="src/img/WhatsApp Image 2026-09-07 at 18.05.25.jpeg"
+            src={friendPhotoOne}
             className="absolute top-16 left-6 w-14 h-14 rounded-full border-2 border-white shadow-md object-cover"
           />
           <img
-            src="src/img/WhatsApp Image 2026-09-07 at 18.05.26.jpeg"
+            src={friendPhotoTwo}
             className="absolute top-24 right-10 w-16 h-16 rounded-full border-2 border-white shadow-md object-cover"
           />
           <img
-            src="src/img/WhatsApp Image 2026-09-07 at 18.05.26 (1).jpeg"
+            src={friendPhotoThree}
             className="absolute bottom-0 left-1/4 w-12 h-12 rounded-full border-2 border-white shadow-md object-cover"
           />
         </div>
@@ -230,55 +223,98 @@ export default function App() {
         <div className="h-[45%] flex flex-col justify-end pb-6 w-[90%] mx-auto">
           <div className="flex justify-end mb-4 relative">
             <img
-              src="src/img/WhatsApp Image 2026-09-07 at 18.08.47.jpeg"
+              src={calendarPhoto}
               className="w-32 h-20 object-cover border-4 border-white shadow-lg transform rotate-3"
             />
           </div>
-             <div className="bg-white border border-gray-200 w-full p-4 shadow-sm text-xs font-sans text-gray-700">
-              <h3 className="text-center font-bold text-black uppercase mb-3 text-sm">September</h3>
-              <div className="grid grid-cols-7 gap-1 text-center font-bold border-b border-gray-200 pb-2 mb-2 uppercase text-[9px]">
-                <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
+          <div className="bg-white border border-gray-200 w-full p-4 shadow-sm text-xs font-sans text-gray-700">
+            <h3 className="text-center font-bold text-black uppercase mb-3 text-sm">
+              September
+            </h3>
+            <div className="grid grid-cols-7 gap-1 text-center font-bold border-b border-gray-200 pb-2 mb-2 uppercase text-[9px]">
+              <div>Sun</div>
+              <div>Mon</div>
+              <div>Tue</div>
+              <div>Wed</div>
+              <div>Thu</div>
+              <div>Fri</div>
+              <div>Sat</div>
+            </div>
+            <div className="grid grid-cols-7 gap-y-3 gap-x-1 text-center font-semibold text-[11px]">
+              <div className="text-gray-300">29</div>
+              <div className="text-gray-300">30</div>
+              <div className="text-gray-300">31</div>
+              <div>1</div>
+              <div>2</div>
+              <div>3</div>
+              <div>4</div>
+              <div>5</div>
+              <div>6</div>
+              <div>7</div>
+              <div>8</div>
+              <div>9</div>
+              <div>10</div>
+              <div>11</div>
+              <div>12</div>
+              <div>13</div>
+              <div className="relative flex items-center justify-center text-black font-bold text-sm">
+                14
+                <svg
+                  className="absolute w-10 h-10 -ml-0.5 pointer-events-none"
+                  viewBox="0 0 40 40"
+                >
+                  <path
+                    d="M 20 10 C 20 10 15 5 10 10 C 5 15 10 25 20 30 C 30 25 35 15 30 10 C 25 5 20 10 20 10 Z"
+                    fill="none"
+                    stroke="#000000"
+                    strokeWidth="2"
+                    className="draw-circle-anim"
+                  />
+                </svg>
               </div>
-              <div className="grid grid-cols-7 gap-y-3 gap-x-1 text-center font-semibold text-[11px]">
-                <div className="text-gray-300">29</div><div className="text-gray-300">30</div><div className="text-gray-300">31</div>
-                <div>1</div><div>2</div><div>3</div><div>4</div>
-                <div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div>
-                <div>11</div>
-                <div>12</div><div>13</div><div className="relative flex items-center justify-center text-black font-bold text-sm">
-                   14
-                   <svg className="absolute w-10 h-10 -ml-0.5 pointer-events-none" viewBox="0 0 40 40">
-                     <path d="M 20 10 C 20 10 15 5 10 10 C 5 15 10 25 20 30 C 30 25 35 15 30 10 C 25 5 20 10 20 10 Z" fill="none" stroke="#000000" strokeWidth="2" className="draw-circle-anim" />
-                   </svg>
-                </div><div>15</div><div>16</div><div>17</div><div>18</div>
-                <div>19</div><div>20</div><div>21</div><div>22</div><div>23</div><div>24</div><div>25</div>
-                <div>26</div><div>27</div><div>28</div><div>29</div><div>30</div>
-              </div>
-           </div>
+              <div>15</div>
+              <div>16</div>
+              <div>17</div>
+              <div>18</div>
+              <div>19</div>
+              <div>20</div>
+              <div>21</div>
+              <div>22</div>
+              <div>23</div>
+              <div>24</div>
+              <div>25</div>
+              <div>26</div>
+              <div>27</div>
+              <div>28</div>
+              <div>29</div>
+              <div>30</div>
+            </div>
+          </div>
         </div>
       </Page>
 
       <Page bgClass="bg-noise-red" className="items-center justify-center p-6">
         <div className="w-full max-w-[320px] grid grid-cols-2 grid-rows-[120px_100px_120px] gap-3">
           <img
-            src="src/img/WhatsApp Image 2026-09-07 at 18.12.48.jpeg"
+            src={galleryPhotoOne}
             className="w-full h-full object-cover border-[3px] border-white shadow-md"
           />
           <img
-            src="src/img/WhatsApp Image 2026-09-07 at 18.12.19.jpeg"
+            src={galleryPhotoTwo}
             className="w-full h-full object-cover border-[3px] border-white shadow-md"
           />
           <div className="col-span-2 w-full h-full overflow-hidden border-[3px] border-white shadow-md">
             <img
-              src="src/img/WhatsApp Image 2026-09-07 at 18.17.31.jpeg"
+              src={galleryPhotoThree}
               className="w-full h-full object-cover"
             />
           </div>
           <img
-            src="src/img/WhatsApp Image 2026-09-07 at 18.10.50 (2).jpeg"
+            src={galleryPhotoFour}
             className="w-full h-full object-cover border-[3px] border-white shadow-md"
           />
           <img
-            src="src/img/WhatsApp Image 2026-09-07 at 18.10.50 (3).jpeg"
+            src={galleryPhotoFive}
             className="w-full h-full object-cover border-[3px] border-white shadow-md"
           />
         </div>
@@ -307,11 +343,11 @@ export default function App() {
         </div>
         <div className="absolute bottom-10 right-6 flex">
           <img
-            src="src/img/WhatsApp Image 2026-09-07 at 18.19.50 (1).jpeg"
+            src={letterPhotoOne}
             className="w-24 h-32 object-cover border-[4px] border-white shadow-xl transform -rotate-12 translate-x-6 z-10"
           />
           <img
-            src="src/img/WhatsApp Image 2026-09-07 at 18.19.50 (2).jpeg"
+            src={letterPhotoTwo}
             className="w-28 h-20 object-cover border-[4px] border-white shadow-xl transform rotate-6 self-end"
           />
         </div>
@@ -354,15 +390,15 @@ export default function App() {
         </h2>
         <div className="w-48 h-[60%] bg-black mt-12 relative flex flex-col items-center justify-center shadow-inner">
           <img
-            src="src/img/WhatsApp Image 2026-09-07 at 18.22.39.jpeg"
+            src={wishPhotoOne}
             className="w-36 h-36 object-cover border-[4px] border-white absolute -top-8 -left-4 shadow-xl transform rotate-[-4deg]"
           />
           <img
-            src="src/img/WhatsApp Image 2026-09-07 at 18.22.39 (1).jpeg"
+            src={wishPhotoTwo}
             className="w-36 h-36 object-cover border-[4px] border-white absolute top-1/2 -translate-y-1/2 right-[-10px] shadow-xl z-10 transform rotate-[3deg]"
           />
           <img
-            src="src/img/WhatsApp Image 2026-09-07 at 18.22.39 (2).jpeg"
+            src={wishPhotoThree}
             className="w-36 h-36 object-cover border-[4px] border-white absolute -bottom-8 -left-2 shadow-xl z-20 transform rotate-[-2deg]"
           />
         </div>
@@ -389,13 +425,13 @@ export default function App() {
           <div className="relative mt-8">
             <div className="bg-white p-2 shadow-xl transform -rotate-[8deg] z-10 border border-gray-200">
               <img
-                src="src/img/WhatsApp Image 2026-09-07 at 18.24.45.jpeg"
+                src={promisePhotoOne}
                 className="w-32 h-44 object-cover filter grayscale contrast-110"
               />
             </div>
             <div className="bg-white p-2 shadow-xl transform rotate-[6deg] absolute top-10 left-16 z-20 border border-gray-200">
               <img
-                src="src/img/WhatsApp Image 2026-09-07 at 18.24.45 (1).jpeg"
+                src={promisePhotoTwo}
                 className="w-32 h-44 object-cover filter grayscale contrast-110"
               />
             </div>
@@ -434,7 +470,7 @@ export default function App() {
             You Are My Home
           </h2>
           <img
-            src="src/img/WhatsApp Image 2026-09-07 at 18.30.39.jpeg"
+            src={homePhoto}
             className="w-56 h-36 object-cover border-[5px] border-white shadow-[0_10px_20px_rgba(0,0,0,0.15)] mb-8 transform rotate-1"
           />
           <div className="w-full max-w-[280px] border-t border-gray-300 pt-5 text-left">
@@ -518,19 +554,19 @@ export default function App() {
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none mt-10">
           <div className="bg-white p-2 pb-6 shadow-xl border border-gray-200 transform -rotate-[12deg] absolute z-10 w-44 pointer-events-auto">
             <img
-              src="src/img/WhatsApp Image 2026-09-07 at 18.32.44.jpeg"
+              src={finalPhotoOne}
               className="w-full h-24 object-cover filter grayscale contrast-125"
             />
           </div>
           <div className="bg-white p-2 pb-6 shadow-xl border border-gray-200 transform rotate-[8deg] absolute mt-24 ml-16 z-20 w-44 pointer-events-auto">
             <img
-              src="src/img/WhatsApp Image 2026-09-07 at 18.32.45.jpeg"
+              src={finalPhotoTwo}
               className="w-full h-24 object-cover filter grayscale contrast-125"
             />
           </div>
           <div className="bg-white p-2 pb-6 shadow-xl border border-gray-200 transform -rotate-[4deg] absolute mt-48 -ml-12 z-30 w-44 pointer-events-auto">
             <img
-              src="src/img/WhatsApp Image 2026-09-07 at 18.34.28.jpeg"
+              src={finalPhotoThree}
               className="w-full h-24 object-cover filter grayscale contrast-125"
             />
           </div>
