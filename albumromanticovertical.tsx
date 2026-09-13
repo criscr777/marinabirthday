@@ -243,13 +243,13 @@ export default function App() {
                 <div className="text-gray-300">29</div><div className="text-gray-300">30</div><div className="text-gray-300">31</div>
                 <div>1</div><div>2</div><div>3</div><div>4</div>
                 <div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div>
-                <div className="relative flex items-center justify-center text-black font-bold text-sm">
-                   11
+                <div>11</div>
+                <div>12</div><div>13</div><div className="relative flex items-center justify-center text-black font-bold text-sm">
+                   14
                    <svg className="absolute w-10 h-10 -ml-0.5 pointer-events-none" viewBox="0 0 40 40">
                      <path d="M 20 10 C 20 10 15 5 10 10 C 5 15 10 25 20 30 C 30 25 35 15 30 10 C 25 5 20 10 20 10 Z" fill="none" stroke="#000000" strokeWidth="2" className="draw-circle-anim" />
                    </svg>
-                </div>
-                <div>12</div><div>13</div><div>14</div><div>15</div><div>16</div><div>17</div><div>18</div>
+                </div><div>15</div><div>16</div><div>17</div><div>18</div>
                 <div>19</div><div>20</div><div>21</div><div>22</div><div>23</div><div>24</div><div>25</div>
                 <div>26</div><div>27</div><div>28</div><div>29</div><div>30</div>
               </div>
@@ -329,7 +329,7 @@ export default function App() {
         </h1>
         <div className="flex items-end gap-3 mt-4">
           <span className="font-sans font-extrabold text-[8rem] leading-none tracking-tighter">
-            11
+            14
           </span>
           <div className="flex flex-col pb-4">
             <span className="font-sans text-3xl font-bold mb-2">th</span>
