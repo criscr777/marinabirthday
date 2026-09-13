@@ -102,14 +102,17 @@ type PageProps = {
   children?: React.ReactNode;
   bgClass?: string;
   className?: string;
+  id?: string;
 };
 
 const Page = ({
   children,
   bgClass = "bg-noise-cream",
   className = "",
+  id,
 }: PageProps) => (
   <div
+    id={id}
     className={`w-full h-[100dvh] max-w-[450px] mx-auto shrink-0 relative overflow-hidden flex flex-col snap-start shadow-[0_0_20px_rgba(0,0,0,0.1)] ${bgClass} ${className}`}
   >
     {children}
@@ -579,11 +582,167 @@ export default function App() {
           Mind
         </h2>
       </Page>
-      <div className="w-full h-32 max-w-[450px] bg-[#111] snap-start flex items-center justify-center shrink-0">
+      <div className="w-full h-32 max-w-[450px] bg-[#111] snap-start flex items-center justify-center shrink-0 relative">
         <p className="font-sans text-white/30 text-xs tracking-[0.2em] uppercase font-semibold">
           End of Album
         </p>
+
+        <button
+          type="button"
+          onClick={() =>
+            document.getElementById("next-page")?.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            })
+          }
+          className="absolute right-5 top-1/2 -translate-y-1/2 text-white/70 text-[10px] uppercase tracking-[0.2em] border border-white/25 rounded-full px-4 py-2 hover:bg-white/10 active:bg-white/15 transition-all"
+        >
+          seguir →
+        </button>
       </div>
+
+      {/* PÁGINA FINAL — VÍDEO */}
+      <Page
+        id="next-page"
+        bgClass="bg-black"
+        className="items-center relative overflow-hidden"
+      >
+        <style>
+          {`
+            .heart-line {
+              overflow: visible;
+              width: 92%;
+              max-width: 410px;
+              margin-top: 8vh;
+            }
+
+            .heart-line path#line {
+              fill: none;
+              stroke: #e00000;
+              stroke-width: 2;
+              stroke-linecap: butt;
+              stroke-linejoin: round;
+              stroke-miterlimit: 4;
+              stroke-dasharray: 1;
+              stroke-dashoffset: 1;
+              stroke-opacity: 1;
+              animation: dash 4s linear infinite;
+            }
+
+            .heart-line path#heart {
+              transform-origin: 50% 50%;
+              animation: blink 4s linear infinite;
+            }
+
+            @keyframes dash {
+              0% {
+                stroke-dashoffset: 1;
+              }
+              80% {
+                stroke-dashoffset: 0;
+              }
+              100% {
+                stroke-dashoffset: 0;
+              }
+            }
+
+            @keyframes blink {
+              0% {
+                opacity: 0;
+                transform: scale(0);
+              }
+              60% {
+                opacity: 0;
+                transform: scale(0);
+              }
+              70% {
+                opacity: 1;
+                transform: scale(1.2);
+              }
+              75% {
+                opacity: 1;
+                transform: scale(1);
+              }
+              80% {
+                opacity: 1;
+                transform: scale(1.2);
+              }
+              85% {
+                opacity: 1;
+                transform: scale(1);
+              }
+              100% {
+                opacity: 0;
+                transform: scale(1);
+              }
+            }
+
+            .video-polaroid {
+              width: 82%;
+              max-width: 350px;
+              margin-top: 8vh;
+              background: #fff;
+              padding: 10px 10px 42px;
+              box-shadow: 0 18px 45px rgba(0, 0, 0, 0.55);
+              transform: rotate(-1.5deg);
+            }
+
+            .video-frame {
+              width: 100%;
+              aspect-ratio: 16 / 10;
+              display: block;
+              background: #111;
+              object-fit: cover;
+            }
+
+            .video-caption {
+              color: #222;
+              font-family: 'Caveat', cursive;
+              font-size: 22px;
+              text-align: center;
+              margin-top: 5px;
+            }
+          `}
+        </style>
+
+        <svg
+          className="heart-line"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 502.98 108.61"
+          aria-hidden="true"
+        >
+          <path
+            id="heart"
+            d="M213.35 29.43c19.41-15.19 33.68 10.86 37.73 18.82-.28-13.61 11.64-40.98 25.94-34.01 32.3 15.74-15.88 83.8-26.4 81.76-13.24-9-51.35-53.3-37.27-66.57Z"
+            style={{
+              fill: "#ff9999",
+              stroke: "#ff9999",
+              strokeWidth: 1.5,
+              strokeLinecap: "butt",
+              strokeLinejoin: "miter",
+              strokeMiterlimit: 4,
+            }}
+          />
+          <path
+            pathLength="1"
+            id="line"
+            d="M5.32 78.13c.96-.01 5-8.5 5.54-8.54.58-.05 6.1 8.51 7.1 8.51 3.66 0 9.29.06 10.71.05 2.53-.01 4.82-72.88 4.82-72.88l4.76 97.28 3.97-24.45 20.45-.22C64 77.86 77.1 63.66 78.36 63.8c1.31.15 6.68 14.08 7.94 14.07 2.3-.03 33.32.04 35.76.02.96 0 5-8.5 5.53-8.53.59-.05 6.1 8.51 7.1 8.5 3.66 0 9.3.07 10.72.06 2.53-.02 4.81-72.89 4.81-72.89l4.77 97.28 3.97-24.44s83.34-3.33 74.69 7.67c-8.65 11-45.3-42.94-31.65-53.58 25.6-19.96 49.96 36.94 40.26 36.5-12.2-.53 1.8-62.32 23.41-51.7 32.24 15.86-17.56 84.92-26.4 81.77-5.73-2.05-.68-21.68 31.4-26.58 26.65-6.42 29.5 2.35 52.62 7.11 2.53-.02 4.82-72.89 4.82-72.89l4.76 97.28 3.97-24.44 20.45-.22c1.31-.02 14.41-14.22 15.68-14.07 1.32.15 6.7 14.08 7.95 14.07 2.29-.03 33.32.04 35.76.02.95 0 5-8.5 5.53-8.54.58-.04 6.1 8.52 7.1 8.52 3.66 0 9.3.06 10.72.05 2.53-.02 4.81-72.89 4.81-72.89l4.77 97.28 3.97-24.44 20.45-.23c1.31-.01 14.4-14.22 15.68-14.07 1.32.16 6.69 14.09 7.94 14.07"
+          />
+        </svg>
+
+        <div className="video-polaroid">
+          <video
+            className="video-frame"
+            controls
+            playsInline
+            preload="metadata"
+            aria-label="Vídeo"
+          >
+            <source src="/video.mp4" type="video/mp4" />
+          </video>
+          <div className="video-caption">obrigado por tudo.</div>
+        </div>
+      </Page>
     </div>
   );
 }
