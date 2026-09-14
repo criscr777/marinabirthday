@@ -772,7 +772,7 @@ export default function App() {
               <source src={marinaVideoTwo} type="video/mp4" />
               Seu navegador não consegue reproduzir este vídeo.
             </video>
-            <div className="video-caption">mais um pedacinho nosso.</div>
+            <div className="video-caption">você é minha pessoa.</div>
           </div>
         </div>
       </Page>
