@@ -707,10 +707,10 @@ export default function App() {
 
             .video-frame {
               width: 100%;
-              aspect-ratio: 16 / 10;
+              aspect-ratio: 4 / 5;
               display: block;
               background: #111;
-              object-fit: cover;
+              object-fit: contain;
             }
 
             .video-caption {
