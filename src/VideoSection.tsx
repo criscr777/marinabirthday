@@ -1,13 +1,15 @@
 import React from "react";
+import marinaVideo from "./img/marina.mp4";
+import marinaVideoTwo from "./img/marina2.mp4";
 
 const videos = [
   {
     title: "a little memory",
-    src: "/videos/IMG_4020.MOV",
+    src: marinaVideo,
   },
   {
     title: "another memory",
-    src: "/videos/video2.mp4",
+    src: marinaVideoTwo,
   },
 ];
 
