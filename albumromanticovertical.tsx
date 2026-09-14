@@ -606,7 +606,7 @@ export default function App() {
       <Page
         id="next-page"
         bgClass="bg-black"
-        className="items-center relative overflow-hidden"
+        className="final-video-page items-center relative overflow-y-auto overscroll-contain"
       >
         <style>
           {`
@@ -614,7 +614,8 @@ export default function App() {
               overflow: visible;
               width: 92%;
               max-width: 410px;
-              margin-top: 8vh;
+              flex: 0 0 auto;
+              margin: clamp(48px, 10vh, 96px) auto 72px;
             }
 
             .heart-line path#line {
@@ -637,13 +638,14 @@ export default function App() {
 
             .video-gallery {
               width: 100%;
-              max-height: 68vh;
-              overflow-y: auto;
+              flex: 0 0 auto;
+              overflow: visible;
               display: flex;
               flex-direction: column;
               align-items: center;
-              gap: 18px;
-              padding: 0 12px 20px;
+              gap: 44px;
+              padding: 0 20px 96px;
+              touch-action: pan-y;
             }
 
             @keyframes dash {
@@ -693,7 +695,7 @@ export default function App() {
               width: 82%;
               max-width: 350px;
               flex: 0 0 auto;
-              margin-top: 0;
+              margin: 0;
               background: #fff;
               padding: 10px 10px 42px;
               box-shadow: 0 18px 45px rgba(0, 0, 0, 0.55);
