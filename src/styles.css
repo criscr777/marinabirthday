@@ -24,14 +24,32 @@ img {
 }
 
 /* Pagina 2 */
-img[src*="05.25"] { width: 4.5rem !important; height: 4.5rem !important; }
-img[src*="05.26.jpeg"] { width: 5rem !important; height: 5rem !important; }
-img[src*="05.26 (1).jpeg"] { width: 4rem !important; height: 4rem !important; }
-img[src*="08.47"] { width: 10rem !important; height: 6.25rem !important; }
+img[src*="05.25"] {
+  width: 4.5rem !important;
+  height: 4.5rem !important;
+}
+img[src*="05.26.jpeg"] {
+  width: 5rem !important;
+  height: 5rem !important;
+}
+img[src*="05.26 (1).jpeg"] {
+  width: 4rem !important;
+  height: 4rem !important;
+}
+img[src*="08.47"] {
+  width: 10rem !important;
+  height: 6.25rem !important;
+}
 
 /* Pagina 4 */
-img[src*="19.50 (1)"] { width: 9rem !important; height: 12rem !important; }
-img[src*="19.50 (2)"] { width: 10.5rem !important; height: 7.5rem !important; }
+img[src*="19.50 (1)"] {
+  width: 9rem !important;
+  height: 12rem !important;
+}
+img[src*="19.50 (2)"] {
+  width: 10.5rem !important;
+  height: 7.5rem !important;
+}
 div:has(> img[src*="19.50 (1)"]) {
   bottom: 6rem !important;
   left: 50% !important;
@@ -40,103 +58,47 @@ div:has(> img[src*="19.50 (1)"]) {
 }
 
 /* Ultima pagina */
-img[src*="32.44"] { width: 15rem !important; height: 8.75rem !important; }
-img[src*="32.45"] { width: 15rem !important; height: 8.75rem !important; }
-img[src*="34.28"] { width: 15rem !important; height: 8.75rem !important; }
+img[src*="32.44"] {
+  width: 15rem !important;
+  height: 8.75rem !important;
+}
+img[src*="32.45"] {
+  width: 15rem !important;
+  height: 8.75rem !important;
+}
+img[src*="34.28"] {
+  width: 15rem !important;
+  height: 8.75rem !important;
+}
 
 /* Pagina 7 */
-img[src*="24.45.jpeg"] { width: 10rem !important; height: 13rem !important; }
-img[src*="24.45 (1).jpeg"] { width: 10rem !important; height: 13rem !important; }
+img[src*="24.45.jpeg"] {
+  width: 10rem !important;
+  height: 13rem !important;
+}
+img[src*="24.45 (1).jpeg"] {
+  width: 10rem !important;
+  height: 13rem !important;
+}
 
 /* Pagina 6 */
-img[src*="22.39.jpeg"] { width: 9rem !important; height: 9rem !important; }
-img[src*="22.39 (1).jpeg"] { width: 9rem !important; height: 9rem !important; }
-img[src*="22.39 (2).jpeg"] { width: 9rem !important; height: 9rem !important; }
+img[src*="22.39.jpeg"] {
+  width: 9rem !important;
+  height: 9rem !important;
+}
+img[src*="22.39 (1).jpeg"] {
+  width: 9rem !important;
+  height: 9rem !important;
+}
+img[src*="22.39 (2).jpeg"] {
+  width: 9rem !important;
+  height: 9rem !important;
+}
 
 /* Mais espaço entre Você e Infinitamente */
-div[class*="bottom-28"][class*="right-6"] { bottom: 12rem !important; }
-div[class*="bottom-10"][class*="left-1/2"] { bottom: 2rem !important; }
-
-/* Vídeos */
-.video-section {
-  width: 100%;
-  min-height: 100vh;
-  padding: 64px 20px;
-  background: #000;
-  color: #f2eadc;
-  font-family: Georgia, "Times New Roman", serif;
+div[class*="bottom-28"][class*="right-6"] {
+  bottom: 12rem !important;
 }
-
-.video-section__intro {
-  width: min(900px, 100%);
-  margin: 0 auto 34px;
-  text-align: center;
-}
-
-.video-section__intro span {
-  display: block;
-  margin-bottom: 10px;
-  font-family: Inter, sans-serif;
-  font-size: 11px;
-  letter-spacing: 0.28em;
-  opacity: 0.7;
-}
-
-.video-section__intro h2 {
-  margin: 0;
-  font-size: clamp(28px, 5vw, 48px);
-  font-weight: 400;
-}
-
-.video-section__grid {
-  width: min(900px, 100%);
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 24px;
-}
-
-.video-card {
-  padding: 12px;
-  background: #eee5d5;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
-  transform: rotate(-0.6deg);
-}
-
-.video-card:nth-child(2) {
-  transform: rotate(0.6deg);
-}
-
-.video-card__label {
-  padding: 8px 4px 12px;
-  color: #111;
-  text-align: center;
-  font-family: Inter, sans-serif;
-  font-size: 11px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-}
-
-.video-card__player {
-  display: block;
-  width: 100%;
-  aspect-ratio: 9 / 16;
-  background: #111;
-  object-fit: contain;
-}
-
-@media (max-width: 700px) {
-  .video-section {
-    padding: 48px 14px;
-  }
-
-  .video-section__grid {
-    grid-template-columns: 1fr;
-    gap: 30px;
-    width: min(430px, 100%);
-  }
-
-  .video-card__player {
-    max-height: 75vh;
-  }
+div[class*="bottom-10"][class*="left-1/2"] {
+  bottom: 2rem !important;
 }
