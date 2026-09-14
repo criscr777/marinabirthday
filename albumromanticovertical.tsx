@@ -738,7 +738,7 @@ export default function App() {
             preload="metadata"
             aria-label="Vídeo"
           >
-            <source src="/video.mp4" type="video/mp4" />
+            <source src="src/img/img/marina.mp4" type="video/mp4" />
           </video>
           <div className="video-caption">obrigado por tudo.</div>
         </div>
