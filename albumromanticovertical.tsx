@@ -21,6 +21,7 @@ import finalPhotoOne from "./src/img/WhatsApp Image 2026-09-07 at 18.32.44.jpeg"
 import finalPhotoTwo from "./src/img/WhatsApp Image 2026-09-07 at 18.32.45.jpeg";
 import finalPhotoThree from "./src/img/WhatsApp Image 2026-09-07 at 18.34.28.jpeg";
 import marinaVideo from "./src/img/marina.mp4";
+import marinaVideoTwo from "./src/img/marina2.mp4";
 
 // Estilos globais e injeção de fontes
 const GlobalStyles = () => (
@@ -635,6 +636,17 @@ export default function App() {
               animation: blink 4s linear infinite;
             }
 
+            .video-gallery {
+              width: 100%;
+              max-height: 68vh;
+              overflow-y: auto;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              gap: 18px;
+              padding: 0 12px 20px;
+            }
+
             @keyframes dash {
               0% {
                 stroke-dashoffset: 1;
@@ -681,11 +693,16 @@ export default function App() {
             .video-polaroid {
               width: 82%;
               max-width: 350px;
-              margin-top: 8vh;
+              flex: 0 0 auto;
+              margin-top: 0;
               background: #fff;
               padding: 10px 10px 42px;
               box-shadow: 0 18px 45px rgba(0, 0, 0, 0.55);
               transform: rotate(-1.5deg);
+            }
+
+            .video-polaroid-secondary {
+              transform: rotate(1.5deg);
             }
 
             .video-frame {
@@ -731,17 +748,33 @@ export default function App() {
           />
         </svg>
 
-        <div className="video-polaroid">
-          <video
-            className="video-frame"
-            controls
-            playsInline
-            preload="metadata"
-            aria-label="Vídeo"
-          >
-            <source src={marinaVideo} type="video/mp4" />
-          </video>
-          <div className="video-caption">obrigado por tudo.</div>
+        <div className="video-gallery">
+          <div className="video-polaroid">
+            <video
+              className="video-frame"
+              controls
+              playsInline
+              preload="metadata"
+              aria-label="Vídeo de Marina"
+            >
+              <source src={marinaVideo} type="video/mp4" />
+              Seu navegador não consegue reproduzir este vídeo.
+            </video>
+            <div className="video-caption">obrigado por tudo.</div>
+          </div>
+          <div className="video-polaroid video-polaroid-secondary">
+            <video
+              className="video-frame"
+              controls
+              playsInline
+              preload="metadata"
+              aria-label="Segundo vídeo de Marina"
+            >
+              <source src={marinaVideoTwo} type="video/mp4" />
+              Seu navegador não consegue reproduzir este vídeo.
+            </video>
+            <div className="video-caption">mais um pedacinho nosso.</div>
+          </div>
         </div>
       </Page>
     </div>
