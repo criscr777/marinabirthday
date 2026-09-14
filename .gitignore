@@ -5,5 +5,3 @@ dist/
 .env
 .env.*
 !.env.example
-src/img/IMG_9958.MOV
-src/img/marina.mp4

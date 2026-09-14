@@ -20,6 +20,7 @@ import homePhoto from "./src/img/WhatsApp Image 2026-09-07 at 18.30.39.jpeg";
 import finalPhotoOne from "./src/img/WhatsApp Image 2026-09-07 at 18.32.44.jpeg";
 import finalPhotoTwo from "./src/img/WhatsApp Image 2026-09-07 at 18.32.45.jpeg";
 import finalPhotoThree from "./src/img/WhatsApp Image 2026-09-07 at 18.34.28.jpeg";
+import marinaVideo from "./src/img/marina.mp4";
 
 // Estilos globais e injeção de fontes
 const GlobalStyles = () => (
@@ -738,7 +739,7 @@ export default function App() {
             preload="metadata"
             aria-label="Vídeo"
           >
-            <source src="src/img/img/marina.mp4" type="video/mp4" />
+            <source src={marinaVideo} type="video/mp4" />
           </video>
           <div className="video-caption">obrigado por tudo.</div>
         </div>
