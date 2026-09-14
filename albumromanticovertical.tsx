@@ -20,8 +20,7 @@ import homePhoto from "./src/img/WhatsApp Image 2026-09-07 at 18.30.39.jpeg";
 import finalPhotoOne from "./src/img/WhatsApp Image 2026-09-07 at 18.32.44.jpeg";
 import finalPhotoTwo from "./src/img/WhatsApp Image 2026-09-07 at 18.32.45.jpeg";
 import finalPhotoThree from "./src/img/WhatsApp Image 2026-09-07 at 18.34.28.jpeg";
-import marinaVideo from "./src/img/marina.mp4";
-import marinaVideoTwo from "./src/img/marina2.mp4";
+import { marinaVideo, marinaVideoTwo } from "./src/videoSources";
 
 // Estilos globais e injeção de fontes
 const GlobalStyles = () => (

@@ -1,6 +1,5 @@
 import React from "react";
-import marinaVideo from "./img/marina.mp4";
-import marinaVideoTwo from "./img/marina2.mp4";
+import { marinaVideo, marinaVideoTwo } from "./videoSources";
 
 const videos = [
   {
